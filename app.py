@@ -1,7 +1,10 @@
 # app.py — Iris Species Prediction API
-# I already import Flask to build the web server, joblib to load my saved model,
+# I import Flask to build the web server, joblib to load my saved model,
 # and numpy to format the input before passing it to the model.
 
+from flask import Flask, request, jsonify
+import joblib
+import numpy as np
 
 # I create the Flask application object.
 # __name__ tells Flask where to find resources relative to this file.
