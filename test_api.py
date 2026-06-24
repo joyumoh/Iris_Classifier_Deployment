@@ -1,4 +1,4 @@
-# test_api.py — Test script for the Iris Prediction API
+# test_api.py - Test script for the Iris Prediction API
 # Run this after starting app.py in a separate terminal.
 
 import requests
@@ -9,8 +9,7 @@ BASE_URL = "http://127.0.0.1:5000"
 
 def print_response(label, response):
     """Helper function to display API responses clearly."""
-    print(f"
-{'='*50}")
+    print(f"{'='*50}")
     print(f"TEST: {label}")
     print(f"Status Code: {response.status_code}")
     print(f"Response:")
@@ -73,6 +72,5 @@ response = requests.post(f"{BASE_URL}/predict", json=incomplete_input)
 print_response("Missing Field Error (Expected 400)", response)
 
 
-print("
-" + "="*50)
+print("" + "="*50)
 print("All tests complete!")
